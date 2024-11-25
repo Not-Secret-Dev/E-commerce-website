@@ -1,11 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 import LaptopImg from "/src/assets/HomePage/Laptop.jpg";
+import ProductList from "./Inner-Components/Products/ProductList";
 
 const HeroContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  height: 530px;
 
   .h_t {
     display: flex;
@@ -108,21 +110,24 @@ const HeroContainer = styled.div`
 
 const Home = () => {
   return (
-    <HeroContainer>
-      <div className="h_t">
-        <h1>TechNest</h1>
-        <p>Nest Your Tech, Elevate Your Life</p>
-        <div className="btns">
-          <button aria-label="See TechNest Products">See Products</button>
-          <button aria-label="Learn More About TechNest">Learn More</button>
+    <>
+      <HeroContainer>
+        <div className="h_t">
+          <h1>TechNest</h1>
+          <p>Nest Your Tech, Elevate Your Life</p>
+          <div className="btns">
+            <button aria-label="See TechNest Products">See Products</button>
+            <button aria-label="Learn More About TechNest">Learn More</button>
+          </div>
         </div>
-      </div>
-      <img
-        src={LaptopImg}
-        alt="A sleek laptop showcasing TechNest products"
-        id="LaptopImg"
-      />
-    </HeroContainer>
+        <img
+          src={LaptopImg}
+          alt="A sleek laptop showcasing TechNest products"
+          id="LaptopImg"
+        />
+      </HeroContainer>
+      <ProductList />
+    </>
   );
 };
 
